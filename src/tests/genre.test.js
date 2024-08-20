@@ -12,7 +12,7 @@ const genre = {
 
 const BASE_URL='/api/v1/genres'
 
-test("POST -> BASE_URL, should return statusCode 201 and res.body.name === course.name", async()=>{
+test("POST -> BASE_URL, should return statusCode 201 and res.body.name === genre.name", async()=>{
 
     const res = await request(app)
         .post(BASE_URL)
@@ -41,7 +41,7 @@ test("GET -> BASE_URL, should return statusCode 200, and res.body.length===1", a
 
 // //!DINAMIC ROUTES
 
- test("GET-> BASE_URL/genreId, should return statusCode 200 and res.body.name === course.name", async()=>{
+ test("GET-> BASE_URL/genreId, should return statusCode 200 and res.body.name === genre.name", async()=>{
 
      const res = await request(app)
          .get(`${BASE_URL}/${genreId}`)
@@ -54,7 +54,7 @@ test("GET -> BASE_URL, should return statusCode 200, and res.body.length===1", a
       expect(res.body.movies).toHaveLength(0)
  });
 
-test("PUT-> BASE_URL/genreId should return statusCode 200 and res.body.name === course.name", async()=>{
+test("PUT-> BASE_URL/genreId should return statusCode 200 and res.body.name === genre.name", async()=>{
 
     const genreUpdate = {
         name : "Comedia"

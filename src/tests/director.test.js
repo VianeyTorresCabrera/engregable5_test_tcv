@@ -16,7 +16,7 @@ const director = {
 
 const BASE_URL='/api/v1/directors'
 
-test("POST -> BASE_URL, should return statusCode 201 and res.body.firstname === course.firstname", async()=>{
+test("POST -> BASE_URL, should return statusCode 201 and res.body.firstname === director.firstname", async()=>{
 
     const res = await request(app)
         .post(BASE_URL)
